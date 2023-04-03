@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="PLÁTNO" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="610" Background="#FF7F6464"/>
+        <Label Content="PLÁTNO" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="610" Background="Yellow"/>
         <UniformGrid x:Name="grid" Margin="22,70,22,22">
 
 

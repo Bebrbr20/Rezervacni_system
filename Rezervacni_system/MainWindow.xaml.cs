@@ -38,17 +38,28 @@ namespace Rezervacni_system
                 {
                     Button button = new Button()
                     {
-                        Content = string.Format("Sedadlo {0}", x),
+                        Content = string.Format("{0}", x),
                        
                     Tag = x
                     };
                     button.Margin = new Thickness(1, 10, 1, 0);
-                  
+                    button.Background = new SolidColorBrush(Colors.Green);
+                    button.Click += new RoutedEventHandler(buttonClick);
+
                     this.grid.Children.Add(button);
 
                 }
             }
             
+            void buttonClick()
+            {
+                string BtnName;
+                BtnName = (sender as System.Windows.Controls.Button).Content.ToString();
+
+                button.Background = new SolidColorBrush(Colors.Red);
+            }
         }
+
+
     }
 }
