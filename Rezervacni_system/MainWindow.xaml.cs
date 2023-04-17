@@ -42,6 +42,8 @@ namespace Rezervacni_system
                        
                     Tag = x
                     };
+
+
                     button.Margin = new Thickness(1, 10, 1, 0);
                     button.Background = new SolidColorBrush(Colors.Green);
                     button.Click += new RoutedEventHandler(buttonClick);
@@ -51,12 +53,16 @@ namespace Rezervacni_system
                 }
             }
             
-            void buttonClick()
+            void buttonClick(object sender, RoutedEventArgs e)
             {
+                Button button = sender as Button;
                 string BtnName;
                 BtnName = (sender as System.Windows.Controls.Button).Content.ToString();
 
                 button.Background = new SolidColorBrush(Colors.Red);
+
+                SubWindow subWindow = new SubWindow();
+                subWindow.Show();
             }
         }
 
