@@ -26,7 +26,19 @@ namespace Rezervacni_system
         {
             InitializeComponent();
 
-
+            var listView = new ListView();
+            listView.ItemsSource = new string[]
+            {
+  "mono",
+  "monodroid",
+  "monotouch",
+  "monorail",
+  "monodevelop",
+  "monotone",
+  "monopoly",
+  "monomodal",
+  "mononucleosis"
+            };
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

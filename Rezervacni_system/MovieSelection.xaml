@@ -7,13 +7,7 @@
         mc:Ignorable="d"
         Title="MovieSelection" Height="450" Width="800">
     <Grid>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+       
 
     </Grid>
 </Window>
