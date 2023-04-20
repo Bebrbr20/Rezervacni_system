@@ -27,14 +27,16 @@ namespace Rezervacni_system
         {
             InitializeComponent();
 
-            int Rows = 5;
+            int Rows = 12;
             int Cols = 10;
             grid.Rows = Rows;
             grid.Columns = Cols;
-            for (int y = 0; y < Rows; ++y)
+            for (int y = 1; y <= Rows; ++y)
             {
+              
+
                
-                for (int x = 0; x < Cols; ++x)
+                for (int x = 1; x <= Cols; ++x)
                 {
                     Button button = new Button()
                     {
@@ -43,6 +45,7 @@ namespace Rezervacni_system
                     Tag = x
                     };
 
+                    
 
                     button.Margin = new Thickness(1, 10, 1, 0);
                     button.Background = new SolidColorBrush(Colors.Green);
@@ -50,19 +53,26 @@ namespace Rezervacni_system
 
                     this.grid.Children.Add(button);
 
+                    button.Name = "button_" + y +"_"+ x;
+
                 }
             }
             
             void buttonClick(object sender, RoutedEventArgs e)
             {
                 Button button = sender as Button;
+
+                Button btn = (Button)sender;
+
                 string BtnName;
                 BtnName = (sender as System.Windows.Controls.Button).Content.ToString();
 
-                button.Background = new SolidColorBrush(Colors.Red);
+                button.Background = new SolidColorBrush(Colors.Orange);
 
-                SubWindow subWindow = new SubWindow();
+                SubWindow subWindow = new SubWindow(btn.Name);
+               
                 subWindow.Show();
+               
             }
         }
 

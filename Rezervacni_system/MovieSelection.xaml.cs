@@ -15,26 +15,21 @@ using System.Windows.Shapes;
 namespace Rezervacni_system
 {
     /// <summary>
-    /// Interakční logika pro SubWindow.xaml
+    /// Interakční logika pro MovieSelection.xaml
     /// </summary>
-    public partial class SubWindow : Window
+    public partial class MovieSelection : Window
     {
 
-        public string Atributes { get; set; }
 
-        public SubWindow(String Atributes)
+
+        public MovieSelection()
         {
             InitializeComponent();
 
 
-            this.Atributes = Atributes;
-
-            string[] location = Atributes.Split('_');
-
-            Label.Content = "Sedadlo -" + " řada: " + location[1] + " číslo: " + location[2];
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
