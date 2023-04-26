@@ -32,3 +32,5 @@ T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\Rezervacni_syst
 T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\Rezervacni_system.csproj.CoreCompileInputs.cache
 T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\SubWindow.g.cs
 T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\SubWindow.baml
+T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\MovieSelection.g.cs
+T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\MovieSelection.baml

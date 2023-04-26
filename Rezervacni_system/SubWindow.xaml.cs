@@ -19,9 +19,24 @@ namespace Rezervacni_system
     /// </summary>
     public partial class SubWindow : Window
     {
-        public SubWindow()
+
+        public string Atributes { get; set; }
+
+        public SubWindow(String Atributes)
         {
             InitializeComponent();
+
+
+            this.Atributes = Atributes;
+
+            string[] location = Atributes.Split('_');
+
+            Label.Content = "Sedadlo -" + " řada: " + location[1] + " číslo: " + location[2];
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
