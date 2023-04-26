@@ -46,45 +46,14 @@ namespace Rezervacni_system
             movieGridView.Columns.Add(new GridViewColumn{
                 Header = "movie name",
             DisplayMemberBinding = new Binding("name"),
-    
+
             });
 
+        {
 
-            movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "cinema",
-                DisplayMemberBinding = new Binding("cinema.name"),
-
-            });
-
-            movieGridView.Columns.Add(new GridViewColumn
-            {
-                Header = "date",
-                DisplayMemberBinding = new Binding("date"),
-
-            });
-
-            movieGridView.Columns.Add(new GridViewColumn
-            {
-                Header = "rows",
-                DisplayMemberBinding = new Binding("cinema.rows"),
-
-            });
-
-            movieGridView.Columns.Add(new GridViewColumn
-            {
-                Header = "cols",
-                DisplayMemberBinding = new Binding("cinema.columns"),
-
-            });
-
-            Grid.SetRow(movieListView, 0);
-            Grid.SetColumn(movieListView, 0);
         }
 
-
-
-        public MovieSelection()
         {
 
         }

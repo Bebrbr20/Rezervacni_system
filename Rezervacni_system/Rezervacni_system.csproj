@@ -55,11 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="cinema.cs" />
-    <Compile Include="movie.cs" />
-    <Compile Include="MovieSelection.xaml.cs">
-      <DependentUpon>MovieSelection.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SubWindow.xaml.cs">
       <DependentUpon>SubWindow.xaml</DependentUpon>
     </Compile>
