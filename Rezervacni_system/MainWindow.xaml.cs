@@ -101,12 +101,12 @@ namespace Rezervacni_system
 
         private void SelectMovie(object sender, MouseButtonEventArgs e)
         {
-           /* if(sender is ListView movieListView && movieListView.SelectedItems is Movie selectedMovie)
+            if(sender is ListView movieListView && movieListView.SelectedItem is Movie selectedMovie)
             {
                 CinemaView cinemaView = new CinemaView(selectedMovie.cinema.rows, selectedMovie.cinema.columns);
 
                 cinemaView.Show();
-            }*/
+            }
             
         }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rezervacni_system"
         mc:Ignorable="d"
-        Title="CinemaView" Height="450" Width="800">
+        Title="CinemaView" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Label Content="PLÁTNO" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="610" Background="Yellow"/>
         <UniformGrid x:Name="grid" Margin="22,70,22,22">

@@ -19,7 +19,7 @@ namespace Rezervacni_system
     /// </summary>
     public partial class CinemaView : Window
     {
-        public CinemaView( string Rows, string Cols)
+        public CinemaView( string Cols, string Rows)
         {
             InitializeComponent();
 
