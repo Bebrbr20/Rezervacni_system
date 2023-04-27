@@ -18,7 +18,7 @@ namespace Rezervacni_system
     /// <summary>
     /// Interakční logika pro MovieSelection.xaml
     /// </summary>
-    public partial class MovieSelection : Window
+  /*   public partial class MovieSelection : Window
     {
         private void ListView()
         {
@@ -84,7 +84,7 @@ namespace Rezervacni_system
         }
 
 
-
+    */
         public MovieSelection()
         {
 
