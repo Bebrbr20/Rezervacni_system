@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\obj\Debug\
+R:\va\vacka\Rezervacni_system\Rezervacni_system\obj\Debug\
 Rezervacni_system
 none
 false
 DEBUG;TRACE
-T:\docroot\3ITa\Va\Rezervacni_system\Rezervacni_system\App.xaml
-4-2037547269
+R:\va\vacka\Rezervacni_system\Rezervacni_system\App.xaml
+5-1925049089
 
-71860313359
-13-1310406943
-MainWindow.xaml;.xaml;MovieSelection.xaml;SubWindow.xaml;
+10-686069384
+14-423116592
+CinemaView.xaml;MainWindow.xaml;.xaml;MovieSelection.xaml;SubWindow.xaml;
 
 False
 

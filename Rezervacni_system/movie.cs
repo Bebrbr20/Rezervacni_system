@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rezervacni_system
 {
-    
-    internal class movie
+
+    internal class Movie
     {
         public string uuid { get; set; }
         public string name { get; set; }
         public string date { get; set; }
         public cinema cinema { get; set; }
 
-            public movie()
+        public Movie()
         {
 
         }
