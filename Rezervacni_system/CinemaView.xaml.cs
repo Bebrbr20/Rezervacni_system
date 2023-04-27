@@ -62,7 +62,7 @@ namespace Rezervacni_system
                 string BtnName;
                 BtnName = (sender as System.Windows.Controls.Button).Content.ToString();
 
-                button.Background = new SolidColorBrush(Colors.Orange);
+                //button.Background = new SolidColorBrush(Colors.Orange);
 
                 SubWindow subWindow = new SubWindow(btn.Name);
 
