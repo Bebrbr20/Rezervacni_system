@@ -27,7 +27,7 @@ namespace Rezervacni_system
 
         private void ListView()
         {
-            string jsonFilePath = "../../filmy.json";
+            string jsonFilePath = "../../Data/filmy.json";
             string jsonData = File.ReadAllText(jsonFilePath);
             List<Movie> movies = JsonConvert.DeserializeObject<List<Movie>>(jsonData);
 
@@ -40,7 +40,7 @@ namespace Rezervacni_system
             };
 
 
-            movieListView.Items.Refresh();
+           
 
             movieListView.MouseDoubleClick += SelectMovie;
 

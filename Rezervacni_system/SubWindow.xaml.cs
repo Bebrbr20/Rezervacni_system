@@ -38,5 +38,10 @@ namespace Rezervacni_system
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

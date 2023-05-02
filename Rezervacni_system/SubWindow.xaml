@@ -9,25 +9,60 @@
     <Grid>
         <Label x:Name="Label" Content="Label" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="592" Height="73" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-        <Grid Margin="0,113,0,118">
+        <Grid  HorizontalAlignment="Center" VerticalAlignment="Top" Height="118" Margin="0,131,0,0">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="41*"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="47*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Email :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Grid.Row="1" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Grid.Row="1" Height="28" Grid.Column="2" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+
+            <Label Content="Jméno :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="28" Grid.Column="2" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+
+            <Label Content="Tel :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Grid.Row="2" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Grid.Row="2" Height="28" Grid.Column="2" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+            <Button  Content="Odeslat" HorizontalAlignment="Left" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.Column="1" Margin="50,0,0,0"/>
+        </Grid>
+        <Label Content="Registrace" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="120" HorizontalContentAlignment="Center">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Ostatní volby" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="120" HorizontalContentAlignment="Center">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Grid Margin="0,254,0,31">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
-            <Label Content="Email :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Grid.Row="1" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Grid.Row="1" Height="28" Grid.Column="1" TextChanged="TextBox_TextChanged"/>
-
-            <Label Content="Jméno :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Grid.Row="0" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Grid.Row="0" Height="28" Grid.Column="1" TextChanged="TextBox_TextChanged"/>
-
-            <Label Content="Tel :" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Grid.Row="2" Width="380" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Grid.Row="2" Height="28" Grid.Column="1" TextChanged="TextBox_TextChanged"/>
+            <Button Content="Prodáno na místě" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
+            <Button Content="Nedostupné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Grid.Column="1"/>
+            <Button Content="Volné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Grid.Column="2"/>
         </Grid>
+
     </Grid>
 </Window>

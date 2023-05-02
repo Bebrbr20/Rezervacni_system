@@ -58,11 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="cinema.cs" />
+    <Compile Include="Model\cinema.cs" />
     <Compile Include="CinemaView.xaml.cs">
       <DependentUpon>CinemaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="movie.cs" />
+    <Compile Include="Model\movie.cs" />
     <Compile Include="SubWindow.xaml.cs">
       <DependentUpon>SubWindow.xaml</DependentUpon>
     </Compile>
@@ -83,10 +83,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include=".xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MovieSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,7 +109,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="filmy.json" />
+    <None Include="Data\filmy.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Window\CinemaView\" />
+    <Folder Include="Window\Main\" />
+    <Folder Include="Window\Reservation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
