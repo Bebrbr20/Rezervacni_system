@@ -18,6 +18,8 @@ namespace Rezervacni_system.DB
             public string email { get; set; }
             public string tel { get; set; }
             public string status { get; set; }
+
+        public reservationDB() { }
         
     }
 }

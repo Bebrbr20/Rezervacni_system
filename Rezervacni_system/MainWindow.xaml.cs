@@ -50,7 +50,7 @@ namespace Rezervacni_system
 
             movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "movie name",
+                Header = "Movie name",
                 DisplayMemberBinding = new Binding("name"),
 
             });
@@ -58,28 +58,28 @@ namespace Rezervacni_system
 
             movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "cinema",
+                Header = "Cinema",
                 DisplayMemberBinding = new Binding("cinema.name"),
 
             });
 
             movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "date",
+                Header = "Date",
                 DisplayMemberBinding = new Binding("date"),
 
             });
 
             movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "rows",
+                Header = "Rows",
                 DisplayMemberBinding = new Binding("cinema.rows"),
 
             });
 
             movieGridView.Columns.Add(new GridViewColumn
             {
-                Header = "cols",
+                Header = "Cols",
                 DisplayMemberBinding = new Binding("cinema.columns"),
 
             });

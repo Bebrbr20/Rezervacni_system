@@ -11,17 +11,19 @@ namespace Rezervacni_system
     public class DBHandler
     {
  
-            private SQLiteConnection _db;
+            public SQLiteConnection _db;
 
             public DBHandler()
             {
 
-                _db = new SQLiteConnection("../../DB");
-                _db.CreateTable<reservationDB>();
+                _db = new SQLiteConnection("../../DB/databazka.db");
+               
                
             }
-      
-     
 
+        internal void CreateTable<T>()
+        {
+            _db.CreateTable<T>();
+        }
     }
 }
