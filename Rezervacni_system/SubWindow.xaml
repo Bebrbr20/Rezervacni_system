@@ -53,15 +53,15 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Grid Margin="0,254,0,31">
+        <Grid Margin="0,254,0,31" HorizontalAlignment="Center" Width="439">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Prodáno na místě" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
-            <Button Content="Nedostupné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Grid.Column="1"/>
-            <Button Content="Volné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Grid.Column="2"/>
+            <Button Content="Prodáno na místě" HorizontalAlignment="Center" VerticalAlignment="Center" Click="sold_on_place"/>
+            <Button Content="Nedostupné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="unavaliable" Grid.Column="1"/>
+            <Button Content="Volné" HorizontalAlignment="Center" VerticalAlignment="Center" Click="free" Grid.Column="2"/>
         </Grid>
 
     </Grid>

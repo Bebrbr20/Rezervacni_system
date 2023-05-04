@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -24,12 +25,12 @@ namespace Rezervacni_system
             InitializeComponent();
 
             
-            grid.Rows = int.Parse(Rows); ;
+           grid.Rows = int.Parse(Rows); ;
             grid.Columns = int.Parse(Cols);
             for (int y = 1; y <= int.Parse(Rows); ++y)
             {
-
-
+               
+                
 
                 for (int x = 1; x <= int.Parse(Cols); ++x)
                 {
@@ -42,12 +43,13 @@ namespace Rezervacni_system
 
 
 
-                    button.Margin = new Thickness(1, 10, 1, 0);
+                    button.Margin = new Thickness(1, 15, 1, 0);
+
                     button.Background = new SolidColorBrush(Colors.Green);
                     button.Click += new RoutedEventHandler(buttonClick);
 
                     this.grid.Children.Add(button);
-
+                    
                     button.Name = "button_" + y + "_" + x;
 
                 }
