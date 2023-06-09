@@ -20,17 +20,18 @@ namespace Rezervacni_system
     /// </summary>
     public partial class CinemaView : Window
     {
-        public CinemaView( string Cols, string Rows)
+
+        // Vypsání kina 
+        public CinemaView( string Cols, string Rows, int uuid)
         {
             InitializeComponent();
 
             
-           grid.Rows = int.Parse(Rows); ;
+            grid.Rows = int.Parse(Rows); ;
             grid.Columns = int.Parse(Cols);
             for (int y = 1; y <= int.Parse(Rows); ++y)
             {
-               
-                
+
 
                 for (int x = 1; x <= int.Parse(Cols); ++x)
                 {
@@ -54,6 +55,7 @@ namespace Rezervacni_system
 
                 }
             }
+            // Otevnření pro interakce se sedadlem
 
             void buttonClick(object sender, RoutedEventArgs e)
             {
@@ -66,7 +68,7 @@ namespace Rezervacni_system
 
                 //button.Background = new SolidColorBrush(Colors.Orange);
 
-                SubWindow subWindow = new SubWindow(btn.Name);
+                SubWindow subWindow = new SubWindow(btn.Name, uuid);
 
                 subWindow.Show();
 

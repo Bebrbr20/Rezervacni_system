@@ -2,8 +2,10 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.IO.Packaging;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,16 +30,25 @@ namespace Rezervacni_system
         public int Row { get; set; }
         public int Column { get; set; }
 
-        public SubWindow(String Atributes)
+        public int uuid { get; set; }
+
+        public SubWindow(String Atributes, int uuid)
         {
+
+            /// Init window
+            /// 
             _db = new DBHandler();
             _db.CreateTable<reservationDB>();
+
+            
 
 
             InitializeComponent();
 
 
             this.Atributes = Atributes;
+
+            this.uuid = uuid;
 
             string[] location = Atributes.Split('_');
 
@@ -53,6 +64,7 @@ namespace Rezervacni_system
 
         }
 
+        /// Function for inserting to DB
         public static void Insert(SQLiteConnection db, string status, int uuid, int row, int column, string name, string email, string tel)
         {
             var dbcon = new reservationDB()
@@ -73,16 +85,21 @@ namespace Rezervacni_system
 
         private void unavaliable(object sender, RoutedEventArgs e)
         {
-
+            Insert(_db._db, "unavaliable", this.uuid, this.Row, this.Column, "", "", "");
+           // SubWindow.close();
         }
 
         private void free(object sender, RoutedEventArgs e)
         {
-            Insert(_db._db, "avaliable", 0, this.Row, this.Column, "", "", "");
+            Insert(_db._db, "avaliable", this.uuid, this.Row, this.Column, "", "", "");
+           // SubWindow.close();
+
         }
 
         private void sold_on_place(object sender, RoutedEventArgs e)
         {
+            Insert(_db._db, "soldOnPlace", this.uuid, this.Row, this.Column, "", "", "");
+          //  SubWindow.close();
 
         }
     }

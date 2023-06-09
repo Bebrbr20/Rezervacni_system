@@ -25,7 +25,7 @@ namespace Rezervacni_system
     public partial class MainWindow : Window
     {
 
-
+        /// Vypsání listu s filmami
         private void ListView()
         {
             string jsonFilePath = "../../Data/filmy.json";
@@ -100,11 +100,12 @@ namespace Rezervacni_system
 
         }
 
+        //Akce po vybrání filmu
         private void SelectMovie(object sender, MouseButtonEventArgs e)
         {
             if(sender is ListView movieListView && movieListView.SelectedItem is Movie selectedMovie)
             {
-                CinemaView cinemaView = new CinemaView(selectedMovie.cinema.rows, selectedMovie.cinema.columns);
+                CinemaView cinemaView = new CinemaView(selectedMovie.cinema.rows, selectedMovie.cinema.columns, selectedMovie.uuid);
 
                 cinemaView.Show();
             }
