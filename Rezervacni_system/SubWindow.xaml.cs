@@ -30,9 +30,10 @@ namespace Rezervacni_system
         public int Row { get; set; }
         public int Column { get; set; }
 
-        public int uuid { get; set; }
+        public string uuid { get; set; }
+        public Button button { get; set; }
 
-        public SubWindow(String Atributes, int uuid)
+        public SubWindow(String Atributes, string uuid, Button button)
         {
 
             /// Init window
@@ -50,6 +51,8 @@ namespace Rezervacni_system
 
             this.uuid = uuid;
 
+            this.button = button;
+
             string[] location = Atributes.Split('_');
 
             this.Row = int.Parse(location[1]);
@@ -65,7 +68,7 @@ namespace Rezervacni_system
         }
 
         /// Function for inserting to DB
-        public static void Insert(SQLiteConnection db, string status, int uuid, int row, int column, string name, string email, string tel)
+        public static void Insert(SQLiteConnection db, string status, string uuid, int row, int column, string name, string email, string tel)
         {
             var dbcon = new reservationDB()
             {
@@ -86,21 +89,43 @@ namespace Rezervacni_system
         private void unavaliable(object sender, RoutedEventArgs e)
         {
             Insert(_db._db, "unavaliable", this.uuid, this.Row, this.Column, "", "", "");
-           // SubWindow.close();
+
+            button.Background = new SolidColorBrush(Colors.Red);
+            Close();
         }
 
         private void free(object sender, RoutedEventArgs e)
         {
             Insert(_db._db, "avaliable", this.uuid, this.Row, this.Column, "", "", "");
-           // SubWindow.close();
+
+            button.Background = new SolidColorBrush(Colors.Green);
+            Close();
 
         }
 
         private void sold_on_place(object sender, RoutedEventArgs e)
         {
             Insert(_db._db, "soldOnPlace", this.uuid, this.Row, this.Column, "", "", "");
-          //  SubWindow.close();
 
+            button.Background = new SolidColorBrush(Colors.Red);
+            Close();
+
+        }
+
+        private void Reservation(object sender, RoutedEventArgs e)
+        {
+            if (Jmeno.Text.Length < 50 && Email.Text.Contains("@") && int.TryParse(Tel.Text, out _))
+            {
+                Insert(_db._db, "reserved", this.uuid, this.Row, this.Column, Jmeno.Text, Email.Text, Tel.Text);
+                button.Background = new SolidColorBrush(Colors.Red);
+                Send.Background = new SolidColorBrush(Colors.Green);
+                Close();
+            }
+            else
+            {
+                Send.Background = new SolidColorBrush(Colors.Red);
+            }
+           
         }
     }
 }

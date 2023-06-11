@@ -29,5 +29,10 @@ namespace Rezervacni_system
         {
             _db.CreateTable<T>();
         }
+
+        public List<T> GetTable<T>(string query) where T : new()
+        {
+            return _db.Query<T>(query);
+        }
     }
 }
