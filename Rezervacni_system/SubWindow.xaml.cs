@@ -46,6 +46,7 @@ namespace Rezervacni_system
 
             InitializeComponent();
 
+            
 
             this.Atributes = Atributes;
 
@@ -60,6 +61,21 @@ namespace Rezervacni_system
             this.Column = int.Parse(location[2]);
 
             Label.Content = "Sedadlo -" + " řada: " + location[1] + " číslo: " + location[2];
+
+            string select_query = "SELECT * FROM reservationDB WHERE Uuid = ";
+            select_query = select_query + "'" + uuid + "'" + "AND row ='" + location[1] + "'AND column ='" + location[2] + "'";
+            List<reservationDB> result = _db._db.Query<reservationDB>(select_query);
+
+            if (result != null)
+            {
+                foreach (var item in result)
+                {
+                    Jmeno.Text = item.name;
+                    Email.Text = item.email;
+                    Tel.Text = item.tel;
+                }
+                
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
