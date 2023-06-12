@@ -11,7 +11,7 @@ namespace Rezervacni_system.DB
     {
          [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
-            public int Uuid { get; set; }
+            public string Uuid { get; set; }
             public int row { get; set; }
             public int column { get; set; }
             public string name { get; set; }
